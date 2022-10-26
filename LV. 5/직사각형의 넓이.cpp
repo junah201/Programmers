@@ -33,7 +33,7 @@ xy points_top()
     if (points.empty())
     {
         xy tmp;
-        tmp.x = -1;
+        tmp.idx = -1;
         return tmp;
     }
 
@@ -80,7 +80,7 @@ long long solution(vector<vector<int>> rectangles)
         same_x.push_back(points_top());
 
         // 종료 조건
-        if (points.empty() || same_x.front().x == -1)
+        if (points.empty() || same_x.front().idx == -1)
             break;
 
         int now_x = same_x.front().x;
